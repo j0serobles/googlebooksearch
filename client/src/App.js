@@ -3,9 +3,9 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import Nav       from './components/Nav';
-import Bookshelf from './components/Bookshelf';
-import Detail    from './components/Detail';
-import Search    from './components/Search'; 
+import Bookshelf from './pages/Bookshelf';
+import Detail    from './pages/Detail';
+import Search    from './pages/Search'; 
 import NoMatch   from './pages/NoMatch';
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
