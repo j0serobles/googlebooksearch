@@ -23,24 +23,47 @@ class Bookshelf extends Component {
     componentDidMount() {
       this.getSavedBooks();
     }
-
-    
     
     //Custom method to retrieve all saved books in the db.
     getSavedBooks = () => {
       API.getBooks().then(res => { 
-        console.log("Bookshelf[33]" + res.data);
-        //this.setState( { books: res.data } )
+        res.data.map( (book, index) => { 
+          console.log("Bookshelf[33]" + JSON.stringify(book, '', 2));
+        })
+        this.setState( { books: res.data } )
       })
       .catch(err => console.log(err));
     }
 
+    deleteBook = (bookId) => {
+
+      console.log('Delete Button clicked. Book id :' + bookId);  
+    
+      if ( bookId ) {
+    
+        API.deleteBook(bookId)
+        .then(res => {
+        console.log("Book deleted: " + res.data);
+        this.getSavedBooks();
+        })
+        .catch(err => {
+          console.log(err);
+        });
+      }
+    }
+    
 
 
     render() { 
 
-        return(  
-            <BookList books={this.state.books }/>
+        return( 
+          <div className="section no-pad-bot" id="index-banner">
+          <div className="container">
+            <div className="row center">
+              <BookList books={this.state.books } caller="bookshelf" onDelete={this.deleteBook}/>
+            </div>
+          </div>
+        </div> 
         );
     }
 }

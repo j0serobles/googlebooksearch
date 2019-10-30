@@ -11,5 +11,11 @@ export default {
       const API_KEY = process.env.REACT_APP_API_KEY;
       console.log ("https://www.googleapis.com/books/v1/volumes?q=" + searchTerm + "&key=" + API_KEY);
       return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + searchTerm + "&key=" + API_KEY);
+    },
+    saveBook : function(book) { 
+      return axios.post("/api/books", book ); 
+    },
+    deleteBook : function(bookId) { 
+      return axios.delete("/api/books/" + bookId ); 
     }
 };

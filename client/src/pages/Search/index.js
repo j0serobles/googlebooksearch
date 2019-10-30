@@ -37,8 +37,8 @@ class Search extends Component {
                   </h5>
                 </div>
                 <div className="row center">
-                  <SearchBox onSubmit={this.searchBooks} />
-                  <BookList  books={this.state.searchResults} />
+                  <SearchBox onSubmit={this.searchBooks} value={this.state.query}/>
+                  <BookList  books={this.state.searchResults} caller="search"/>
                 </div>
               </div>
             </div>
