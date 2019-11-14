@@ -125,9 +125,10 @@
 <h2 id="technologies-used">Technologies Used</h2>
 <p>Front End/User Interface:</p>
 <ul>
-<li>HTML/CSS/Javascript</li>
-<li>React JS component library (The “R” in MERN)<br>
-Axios library (For API calls from React)</li>
+<li>HTML/CSS/Javascript : Languages</li>
+<li><a href="https://reactjs.org/">React</a> JS component library (The “R” in MERN).</li>
+<li><a href="https://www.npmjs.com/package/axios">Axios</a> library (For API calls from React)</li>
+<li><a href="https://reacttraining.com/react-router/">React Router</a> : Provides routing to the React app</li>
 </ul>
 <p>Back End:</p>
 <ul>
