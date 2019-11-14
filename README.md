@@ -8,7 +8,7 @@
 <h2 id="access-and-usage">Access and Usage</h2>
 <p>The application has been deployed to <a href="https://desolate-lake-78427.herokuapp.com/">Heroku</a>.  The GitHub repo is at <a href="%5Bhttps://github.com/j0serobles/googlebooksearch%5D(https://github.com/j0serobles/googlebooksearch)">googlebooksearch</a> .</p>
 <p>The landing page allows the user to search for books in the Google Books database, by entering a book subject, book title, author or ISBN number:</p>
-<p><img src="https://github.com/j0serobles/newsScraper/blob/master/images/homepage.jpg" alt="googlebooksearch landing page"></p>
+<p><img src="https://github.com/j0serobles/googlebooksearch/blob/master/landing.PNG" alt="googlebooksearch landing page"></p>
 <p>The user must press the <code>&lt;Enter&gt;</code> key after entering the search term(s),  and after a few seconds the page will show a list of the top 10 books from the Google Books database related to the search term(s) entered.</p>
 <p>Clicking on the book’s thumbnail image (if available), the book’s title, or the “Preview” button will open a new tab in the browser showing the preview page for the book from Google Books.</p>
 <p>Clicking on the “Save Book” button will save the book to the bookshelf for later review.</p>
