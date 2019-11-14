@@ -4,7 +4,6 @@ import "./App.css";
 
 import Nav       from './components/Nav';
 import Bookshelf from './pages/Bookshelf';
-import Detail    from './pages/Detail';
 import Search    from './pages/Search'; 
 import NoMatch   from './pages/NoMatch';
 
@@ -19,7 +18,6 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Search} />
             <Route exact path="/bookshelf" component={Bookshelf} />
-            <Route exact path="/books/:id" component={Detail} />
             <Route component={NoMatch} />
           </Switch>
         </Router>
