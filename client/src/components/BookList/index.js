@@ -46,62 +46,79 @@ function BookList(props) {
 
   return(
       <div>
-      {props.books.length === 0 ? (<h3>Book list is empty.</h3>)  :
-        (<table>
-        <thead>
-        <tr>
-            <th>Title</th>
-            <th>Author(s)</th>
-            <th>Description</th>
-        </tr>
-        </thead>
-        <tbody>
-        { props.books.map( (book, index) => (
-            <tr key={index} >
-              <td>
-                <a href={book.volumeInfo.infoLink} target="_blank">{book.volumeInfo.title}</a>
-              </td>
-              <td>{book.volumeInfo.authors}</td>
-              <td>{book.volumeInfo.description}</td>
-              <td>
-                <div className="row">
-                  <div className="col">
-                    { props.caller === "search" ? 
-                      (<Button
-                          onClick={(e) => saveBook(book.volumeInfo)}
-                          type="success"
-                          className="input-lg"
-                      >Save Book</Button>)
+      { props.books.length === 0 ? (<h3>Book list is empty.</h3>)  :
+        <div>
+        {props.books.map( (book, index) => (
+          <div className="row" key={index}>
+              <div className="col">
+                { book.volumeInfo.imageLinks ? 
+                     <a className="left" href={book.volumeInfo.infoLink} target="_blank">
+                       <img src={book.volumeInfo.imageLinks.thumbnail}/>
+                     </a> 
+                     : 
+                     <p>Image Not Available</p>
+                }
+              </div>
+
+
+                
+                     <a className="left" href={book.volumeInfo.infoLink} target="_blank">{book.volumeInfo.title}</a>
+  
+ 
+                   <br></br>
+              
+                   <div className="col">
+                     <span className="left">By: { book.volumeInfo.authors }</span>
+                   </div>
+              
+                  <br></br>
+                    <div className="left-align">
+                       <span> {book.volumeInfo.description} </span>
+                    </div>
+
+                    <br></br>
+                    
+
+                    <div className="row">
+                      <div className="col s1 offset-s3">
+                        { props.caller === "search" ? 
+                          (<Button
+                            onClick={(e) => saveBook(book.volumeInfo)}
+                            type="success"
+                            className="input-lg"
+                           >Save Book</Button>)
                     :
-                      (<Button
-                          onClick={(e) => props.onDelete(book._id)}
-                          type="danger"
-                          className="input-lg red lighten-2"
-                        >Delete</Button>
-                      )
-                    }
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col">
+                          (<Button
+                            onClick={(e) => props.onDelete(book._id)}
+                            type="danger"
+                            className="input-lg red lighten-2"
+                           >Delete</Button>
+                          )
+                      }
+                    </div>
+                    <div className="col s1 offset-s4">
                     <Button
                       onClick={(e) => previewBook(book.volumeInfo)}
                       type="success"
                       className="input-lg"
                     >Preview</Button>
-                  </div>
-                </div>
-              </td>
-            </tr>
+                    </div>
+                    </div>
+                     <hr></hr>
+          
+        </div>
+ 
             )
           )
+        
         }
-        </tbody>
-        </table>
-        )
+ 
+       )
+
+       </div>
       }
-      </div>
-    );
-  }
+    </div>
+  );
+}
 
 export default BookList;
