@@ -6,7 +6,7 @@
 <h1 id="google-book-search">Google Book Search</h1>
 <p>UCF Bootcamp Week 20 Homework - A Google Books Search application to showcase a full-stack app with React, Express, and Mongo DB.</p>
 <h2 id="access-and-usage">Access and Usage</h2>
-<p>The application has been deployed to <a href="https://desolate-lake-78427.herokuapp.com/">Heroku</a>.</p>
+<p>The application has been deployed to <a href="https://desolate-lake-78427.herokuapp.com/">Heroku</a>.  The GitHub repo is at <a href="%5Bhttps://github.com/j0serobles/googlebooksearch%5D(https://github.com/j0serobles/googlebooksearch)">googlebooksearch</a> .</p>
 <p>The landing page allows the user to search for books in the Google Books database, by entering a book subject, book title, author or ISBN number:</p>
 <p><img src="https://github.com/j0serobles/newsScraper/blob/master/images/homepage.jpg" alt="googlebooksearch landing page"></p>
 <p>The user must press the <code>&lt;Enter&gt;</code> key after entering the search term(s),  and after a few seconds the page will show a list of the top 10 books from the Google Books database related to the search term(s) entered.</p>
@@ -123,24 +123,19 @@
             index.js
 </code></pre>
 <h2 id="technologies-used">Technologies Used</h2>
-<p>Front End:</p>
+<p>Front End/User Interface:</p>
 <ul>
 <li>HTML/CSS/Javascript</li>
-<li><a href="https://jquery.com/">jQuery</a> - DOM Manipulation, event handling,<br>
-Ajax library</li>
-<li><a href="https://handlebarsjs.com/">HandlebarsJS</a> - View rendering engine</li>
+<li>React JS component library (The “R” in MERN)<br>
+Axios library (For API calls from React)</li>
 </ul>
 <p>Back End:</p>
 <ul>
-<li><a href="https://nodejs.org/en/about/">NodeJS</a> : Asynchronous, event-driven<br>
-JavaScript runtime.</li>
-<li><a href="https://expressjs.com/">Express</a> : Node.js web application framework<br>
-(middleware).</li>
-<li><a href="https://www.mongodb.com/">MongoDB</a> : #### MongoDB is a general<br>
-purpose, document-based, distributed database.</li>
+<li><a href="https://nodejs.org/en/about/">NodeJS</a> : Asynchronous, event-driven  JavaScript runtime (The “N” in MERN).</li>
+<li><a href="https://expressjs.com/">Express</a> : Node.js web application framework  (middleware) (The “E” in MERN)</li>
+<li><a href="https://www.mongodb.com/">MongoDB</a> : #### MongoDB is a general purpose, document-based, distributed database (The “M” in MERN).</li>
 <li><a href="https://mongoosejs.com/">Mongoose</a> : Schema modelling for MongoDB.</li>
-<li><a href="https://www.npmjs.com/package/axios">Axios :</a> An HTTP based client<br>
-for NodeJS.</li>
+<li><a href="https://www.npmjs.com/package/axios">Axios :</a> An HTTP based client for NodeJS.</li>
 </ul>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
